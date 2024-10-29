@@ -50,7 +50,7 @@ class LinkedList:
             pre.next = None
             self.tail = pre
             self.length -= 1
-        return temp.value
+        return temp
 
 
 
