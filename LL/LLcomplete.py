@@ -35,14 +35,22 @@ class LinkedList:
     
     # tentativa de fazer o pop sozinho
     def pop(self):
-        ult = self.next
-        pen = self.next
-        if ult is None:
-            print('Lista vazia!')     
+        temp = self.head
+        pre = temp
+        if self.head is None:
+            print(None)
+        elif self.head.next is None:
+            self.head = None
+            self.tail = None
+            self.length = 0
         else:
-            while temp is not None:
-            
+            while temp.next is not None:
+                pre = temp
                 temp = temp.next
+            pre.next = None
+            self.tail = pre
+            self.length -= 1
+        return temp.value
 
 
 
