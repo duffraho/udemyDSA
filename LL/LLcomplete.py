@@ -33,7 +33,6 @@ class LinkedList:
         self.length += 1
         return True
     
-    # tentativa de fazer o pop sozinho
     def pop(self):
         temp = self.head
         pre = temp
@@ -52,6 +51,15 @@ class LinkedList:
             self.length -= 1
         return temp
 
+    def prepend(self, nn):
+        if self.head is None:
+            self.head = nn
+            self.tail = nn
+            self.length = 1
+        else:
+            nn.next = self.head
+            self.head = nn
+            self.length += 1
 
 
 my_linked_list = LinkedList(1)
