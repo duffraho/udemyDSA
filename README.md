@@ -1,2 +1,2 @@
 # udemyDSA
-repo for the dsa course in python
+repo for the Data Structures and Algorithms course in python
