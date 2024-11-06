@@ -63,6 +63,21 @@ class LinkedList:
         self.length += 1
         return True
 
+    def pop_first(self):
+        if self.head is None:
+            return None
+        elif self.head.next is None:
+            temp = self.head
+            self.head = None
+            self.tail = None
+            self.length = 0
+        else:
+            temp = self.head
+            self.head = self.head.next
+            temp.next = None
+            self.length -= 1
+        return temp
+
 
 my_linked_list = LinkedList(1)
 my_linked_list.make_empty()
