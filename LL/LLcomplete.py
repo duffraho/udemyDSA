@@ -100,7 +100,7 @@ class LinkedList:
         # usar i qdo eu precisar printar o valor de i
         for _ in range(index):
             temp = temp.next
-        return temp
+        return temp.value
 
 
 my_LinkedList = LinkedList(0)
