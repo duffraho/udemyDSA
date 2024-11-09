@@ -77,31 +77,34 @@ class LinkedList:
             temp.next = None
             self.length -= 1
         return temp
-
-
-my_linked_list = LinkedList(1)
-my_linked_list.make_empty()
-
-my_linked_list.append(1)
-my_linked_list.append(2)
-
-print('Head:', my_linked_list.head.value)
-print('Tail:', my_linked_list.tail.value)
-print('Length:', my_linked_list.length, '\n')
-
-print('Linked List:')
-my_linked_list.print_list()
-
-
-"""
-    EXPECTED OUTPUT:
-    ----------------
-    Head: 1
-    Tail: 2
-    Length: 2 
-
-    Linked List:
-    1
-    2
     
-"""
+    ''' minha tentativa de fazer o get (até que funcionou)
+    def get(self, index):
+        if index < 0 or index >= self.length:
+            return None
+        temp = self.head
+        ind = 0
+        while temp:
+            if ind == index:
+                return temp.value
+            else:
+                temp = temp.next
+                ind += 1
+    '''
+
+    def get(self, index):
+        if index < 0 or index >= self.lenght:
+            return None
+        temp = self.head
+        # underline no loop qdo eu só preciso iterar N vzs
+        # usar i qdo eu precisar printar o valor de i
+        for _ in range(index):
+            temp = temp.next
+        return temp
+
+
+my_LinkedList = LinkedList(0)
+my_LinkedList.append(1)
+my_LinkedList.append(2)
+my_LinkedList.append(3)
+print(my_LinkedList.get(3))
