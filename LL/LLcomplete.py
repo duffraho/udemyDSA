@@ -93,7 +93,7 @@ class LinkedList:
     '''
 
     def get(self, index):
-        if index < 0 or index >= self.lenght:
+        if index < 0 or index >= self.length:
             return None
         temp = self.head
         # underline no loop qdo eu só preciso iterar N vzs
