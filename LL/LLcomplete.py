@@ -102,7 +102,7 @@ class LinkedList:
             temp = temp.next
         return temp
     
-    def set(self, index, value):
+    def set_value(self, index, value):
         if index < 0 or index >= self.length:
             return None
         temp = self.head
