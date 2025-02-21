@@ -97,7 +97,7 @@ class LinkedList:
             return None
         temp = self.head
         # underline no loop qdo eu só preciso iterar N vzs
-        # usar i qdo eu precisar printar o valor de i
+        # usar i qdo eu precisar usar o valor de i
         for _ in range(index):
             temp = temp.next
         return temp
@@ -124,6 +124,15 @@ class LinkedList:
         temp.next = new_node
         self.length += 1
         return True
+    
+    def remove(self, index):
+        if index < 0 or index >= self.length:
+            return None
+        if index == 0:
+            return self.pop_first()
+        if index == self.length:
+            return self.pop()
+        
 
 my_LinkedList = LinkedList(0)
 my_LinkedList.append(1)
